@@ -1,0 +1,105 @@
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Filosofia mobile frist
+    de menor a mayor (min-width)
+*/
+/* enfoque a una columna y centrado (mobil)*/
+
+body{
+    background-color: rgb(232, 225, 216);
+}
+
+.contenedor{
+    max-width: 1100px;
+    /* width: 500px;
+    height: 400px; */
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    flex:0 1 100%;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+h3{
+    font-family: 'Libre Baskerville',serif;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* regla responsible para medios Flexibles*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* -------------------------------------------------------------- */
+
+
+/* media query(breakpoints) para dos columanas/entradas/cards  (telefonos en modo horizontal)*/
+@media screen and (min-width:480px) {
+    body{
+        background-color: chartreuse;
+    }
+
+    /* contenedor padre */
+    .contenedor-principal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* contenedor hijo */
+    .entrada{
+        flex: 0 1 calc(50% - 1rem);
+    }
+
+}
+
+/* media query(breakpoints) para 3 columanas/entradas/cards  (tabletas de 768*1024)*/
+@media screen and (min-width:768px) {
+    body{
+        background-color: royalblue;
+    }
+
+    /* contenedor hijo */
+    .entrada{
+        flex: 0 1 calc(33% - 1rem);
+    }
+
+}
+
+.contenido span{
+    color: #db008b;
+}
+
+.contenido h3{
+    font-size: .9rem;
+    line-height: 1.4rem;
+}
+
+.contenido{
+    text-transform: uppercase;
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.entrada{
+    margin-bottom: 1rem;
+}
+
+.boton{
+    background-color: #008fb1;
+    text-decoration: none;
+    color: white;
+    padding: .8rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
